@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>Employee Details Form</h3>
+    <form action="my-page.html" method="post">
+        <div>
+        <label for="empid">Employee ID</label>
+        <input type="number" name="empid" id="empid" required>
+        </div>
+
+        <div>
+            <label for="empemail">Email</label>
+            <input type="email" name="empemail" id="empemail">
+            </div>
+
+        <div>
+            <label for="empname">Employee Name</label>
+            <input type="text" name="empname" id="empname">
+        </div>
+
+        <div>
+            <label for="empdob">Date of Birth</label>
+            <input type="date" name="empdob" id="empdob">
+        </div>
+
+        <div>
+            <label for="empgender">I am a </label>
+            <input type="radio" name="empgender" id="empgender1" value="male"> Male
+            <input type="radio" name="empgender" id="empgender2" value="female"> Female
+        </div>
+
+        <div>
+            <label for="empdomain">Domain </label>
+            <select name="empdomain" id="empdomain">
+                <option value="java">Java Developer</option>
+                <option value="dotnet">Dot Net</option>
+                <option value="cloud">Cloud</option>
+                <option value="devops">DevOps</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+    
+</body>
+</html>
