@@ -2,43 +2,79 @@
 <html lang="en">
 <head>
     <title>Document</title>
+     <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<style>
+    header{
+        height: 50px;
+        text-align: center;
+        background-color: cadetblue;
+    }
+    nav{
+        height: 50px;
+        background-color: bisque;
+    }
+    aside,main{
+        height: 200px;
+        border: 1px solid burlywood;
+    }
+    footer{
+        height: 100px;
+        background-color: darkgray;
+    }
+</style>
+
 </head>
 <body>
-    <header><h2>Employee App</h2></header>
-    <nav>Some importatnt links </nav>
-    <main>
-        <table border="1">
-            <caption>Employee Details</caption>
-            <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Profile</th>
-            <th>Salary</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>E101</td>
-            <td>Hitesh</td>
-            <td>Java</td>
-            <td>65,000₹</td>
-        </tr>
-        <tr>
-            <td>E102</td>
-            <td>Gaurav</td>
-            <td>DevOps</td>
-            <td>85,000₹</td>
-        </tr>
-        <tr>
-            <td>E102</td>
-            <td>Harshita</td>
-            <td>Cloud</td>
-            <td>80,000₹</td>
-        </tr>
-        </tbody>
-        
-        </table>
-    </main>
+    <div class="content">
+        <div class="row">
+            <header class="col-12"><h2>Employee App</h2></header>
+            <nav class="col-xl-3 col-md-12 col-12">Some importatnt links </nav>
+            <aside class="col-xl-3 col-md-4 col-12">Some Contentent</aside>
+            <main class="col-xl-6 col-md-8 col-12"> 
+                <table border="1">
+                    <caption>Employee Details</caption>
+                    <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Profile</th>
+                    <th>Salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>E101</td>
+                    <td>Hitesh</td>
+                    <td>Java</td>
+                    <td>65,000₹</td>
+                </tr>
+                <tr>
+                    <td>E102</td>
+                    <td>Gaurav</td>
+                    <td>DevOps</td>
+                    <td>85,000₹</td>
+                </tr>
+                <tr>
+                    <td>E102</td>
+                    <td>Harshita</td>
+                    <td>Cloud</td>
+                    <td>80,000₹</td>
+                </tr>
+                </tbody>
+                
+                </table>
+            </main>
+            <footer class="col-12">
+                <p>&copy;abc.com</p>
+            </footer>
+
+
+        </div>
+    </div>
+    
 </body>
 </html>

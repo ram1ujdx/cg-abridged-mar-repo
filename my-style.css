@@ -1,0 +1,27 @@
+/* Element Selector */
+h2, h3 {
+    padding: 10px;
+    border: solid 1px;
+}
+
+
+/* ID Selector */
+
+#empemail{
+    color: blue;
+}
+
+/* Class Secector */
+
+.from-input{
+    padding-left: 30px;
+}
+
+/* Universal Selector */
+
+* {
+    padding-top: 15px;;
+}
+
+
+
