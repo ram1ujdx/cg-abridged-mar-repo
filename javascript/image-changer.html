@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1px">
+        <tr>
+            <td colspan="2">
+                <img src="images/cosmos.jpg" height="300px" width="400px" id="imgview">
+            </td>
+        </tr>
+        <tr>
+           <td><button onclick="previous()"> Previous</button></td>
+            <td><button onclick="next()">Next</button></td>
+        </tr>
+    </table>
+    
+</body>
+
+<script>
+    var images = ["cosmos.jpg","jonas.jpg","lily.jpg","lotus.jpg"];
+    var img = document.getElementById("imgview");
+    var pos = 0;
+    let next = ()=>{
+        img.src = "images/"+images[pos];
+        pos++;
+        if(pos>=images.length){
+            pos=0;
+        }
+    }
+
+    let previous = ()=>{
+        img.src = "images/"+images[pos];
+        pos--;
+        if(pos<0){
+            pos=images.length-1;
+        }
+    }
+
+</script>
+</html>
