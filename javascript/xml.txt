@@ -1,0 +1,24 @@
+XML - Extensible Markup Language
+
+XML represents Data but XML is not used for presentation purpose
+
+
+<employee>
+    <id>em101</id>
+</employee>
+
+XML Syntax -
+
+- XML Declaration
+    <?xml version = "1.0" encoding = "UTF-8"?>
+
+- Container tag -    <element> </element>
+- Empty tag -    <element/>
+
+- Root Element 
+<root-element>
+.....
+.....
+</root-element>
+
+
