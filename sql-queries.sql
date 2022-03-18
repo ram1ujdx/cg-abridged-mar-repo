@@ -95,3 +95,70 @@ desc stud;
 alter table emp add primary key(empno);
 
 desc emp;
+
+select * from dept;
+
+
+select * from dept;
+
+select * from emp;
+
+
+select empno,ename, emp.deptno, dname, location from emp left join dept on emp.deptno=dept.deptno;
+
+select empno,ename, emp.deptno, dname, location from emp left join dept using(deptno);
+
+select empno,ename, emp.deptno, dname, location from emp right join dept using(deptno);
+
+-- Find the dept which doesn't have any employee --
+
+select d.* from dept d left join emp e on d.deptno=e.deptno where empno is null;
+
+-- Find the Salesman working in Accounts dept --
+
+select ename,job,dname from emp join dept on emp.deptno=dept.deptno where dname='accounts' and job='salesman';
+
+-- Find total employees working in Delhi --
+
+SELECT COUNT(*) as "Total Employees", location FROM EMP,DEPT WHERE EMP.DEPTNO=DEPT.DEPTNO AND location='DELHI' ;
+
+
+-- Find the CLERK working in Bangalore --
+
+select * from emp where job='CLERK' and deptno=(select deptno from dept where location='Bangalore');
+
+-- Show the employee name along with dept name --
+
+select ename,dname from emp join dept on emp.deptno=dept.deptno;
+
+-- Show the employee name along with manager name --
+
+select e.ename,m.ename from emp e join emp m on e.mgr=m.empno;
+
+select ename,mgr,(select ename from emp where e.mgr=empno) as "Manager" from emp e;
+
+-- Show the details of all the MGRs --
+
+select distinct m.* from emp e join emp m on e.mgr=m.empno;
+
+select * from emp where empno in(select distinct mgr from emp);
+
+-- Find the least earner of SALES dept --
+
+ select * from emp where sal = (select min(sal) from emp where deptno=(select deptno from dept where dname='SALES'));
+ 
+ select e.* from emp e left join dept d on e.deptno=d.deptno where d.dname='Sales' order by sal limit 1;
+ 
+ -- Find the list of manager and total employees working under them --
+ 
+ select m.empno,m.ename,(select count(empno) from emp e where e.mgr=m.empno) as "Total Employees" from emp m where empno in(select mgr from emp);
+ 
+ select e.mgr,m.ename, count(e.mgr) from emp e join emp m on e.mgr=m.empno group by e.mgr,m.empno,m.ename;
+ 
+ -- Create table using subquery --
+ 
+ create table empdept as (select e.empno,e.ename, d.deptno, d.dname from emp e join dept d on e.deptno=d.deptno);
+ 
+ select * from empdept;
+ 
+
