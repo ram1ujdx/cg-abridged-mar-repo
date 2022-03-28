@@ -14,9 +14,41 @@ class Employee{
 	public void print(){
 		System.out.println("ID : "+employeeId+" | Name : "+employeeName+" | Salary : "+salary+"| Email : "+email);
 	}
+
 }
 
 class ArraysOfObject{
+	
+	public static Employee searchByEmployeeId(Employee []employees, int employeeId){
+		for(Employee emp:employees){
+			if(emp.employeeId==employeeId){
+				return emp;
+			}
+		}
+		return null;
+	}
+
+	public static Employee searchByEmployeeName(Employee []employees, String employeeName){
+		for(Employee emp:employees){
+			if(emp.employeeName.equalsIgnoreCase(employeeName)){
+				return emp;
+			}
+		}
+		return null;
+	}
+
+	public static Employee[] getEmployees(Employee []employees, float salaryLimit){
+		Employee []list = new Employee[employees.length];
+		int index=0;
+		for(Employee emp:employees){
+			if(emp.salary >= salaryLimit){
+				list[index]=emp;
+				index++;
+			}
+		}
+		return list;
+	}
+		
 	public static void main(String []args){
 
 		Employee []employeeList = new Employee[5];
@@ -26,11 +58,22 @@ class ArraysOfObject{
 		employeeList[3] = new Employee(1008,"Gaurav","gaurav@xyz.com",57000F);
 		employeeList[4] = new Employee(1009,"Yash","yash@xyz.com",76000F);
 
-		for(Employee emp:employeeList){
-			if(emp.salary>=50000){
-				emp.print();	
-			}	
+		Employee e1 = searchByEmployeeId(employeeList, 1007);
+		e1.print();
+		Employee e2 = searchByEmployeeName(employeeList, "gaurav");
+		e2.print();
+
+		System.out.println("List of employees getting salary more than 50k are - ");
+
+		Employee []list = getEmployees(employeeList, 50000);
+
+		for(Employee emp : list){
+			if(emp==null){
+				break;
+			}
+			emp.print();
 		}
+		
 		
 		
 	}
