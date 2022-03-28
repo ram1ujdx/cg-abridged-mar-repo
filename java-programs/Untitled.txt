@@ -1,0 +1,45 @@
+Features of OOP Languages -
+- Encapsulation
+- Abstraction
+- Inheritance
+- Polymorphism
+
+Wrapping up of data and methods together.
++ Data Hiding
+
+ - Data/Fileds should be hidden from outside
+ - It should be accessible through public methods
+
+Naming Standard -
+	1. class and interface names should start with uppercase
+	2. fields/variables/methods name should start with a lowercase and camel
+		case should be followed
+		setImei()
+		screenSize
+	3. packages should be in lowercase only
+	4. constants (final fields) should be in uppercase only
+		final double PI = 3.14;
+
+Constructor -
+
+
+
+String s1 = "hello";
+String s2 = "Hello";
+
+s1.equals(s2) - false
+s1.equalsIgnoreCase(s2) - true
+
+
+public boolean isSameMonth(Holiday h1, Holiday h2){
+	return h1.getMonth().equals(h2.getMonth());
+}
+
+
+
+
+
+
+
+
+
